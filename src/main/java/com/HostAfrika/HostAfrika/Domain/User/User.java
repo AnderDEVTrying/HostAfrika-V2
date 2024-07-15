@@ -32,14 +32,14 @@ public class User implements UserDetails {
     private UserRole role;
     private Timestamp create_Stamp;
 
-    public User(String firstName, String lastName, String email, String password, String phoneNumber, Date birthDate, UserRole role) {
+    public User(String firstName, String lastName, String email, String password, String phoneNumber, Date birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
-        this.role = role;
+        this.role = UserRole.REGULAR;
         this.create_Stamp = new Timestamp(System.currentTimeMillis());
     }
 
